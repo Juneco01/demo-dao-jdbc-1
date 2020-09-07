@@ -24,18 +24,18 @@ public class Program {
         
         SellerDao sellerDao = DaoFactory.createSellerDao();
    
-        System.out.println("TESTE: seller findbyid...........");
+        System.out.println("TEST: seller findbyid...........");
         Seller seller = sellerDao.findById(3); 
         System.out.println(seller);
         
-        System.out.println("TESTE: seller findbydepartment..");
+        System.out.println("TEST: seller findbydepartment..");
         Department department = new Department(2, null);
         List<Seller> list = sellerDao.findByDepartment(department);
         for (Seller obj: list){
             System.out.println(obj);
         }
         
-        System.out.println("TESTE: seller findall..................");
+        System.out.println("TEST: seller findall..................");
         List<Seller> list1 = sellerDao.findAll();
         for (Seller obj: list1){
             System.out.println(obj);
@@ -54,12 +54,12 @@ public class Program {
         sellerDao.update(seller);
         System.out.println("Update completed");
         
-        */
-        
          System.out.println("TESTE: seller delete..................");
          int id = 7;
          sellerDao.deleteById(id);
          System.out.println("Delete completed");
+
+        */
          
 
         
